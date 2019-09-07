@@ -14,7 +14,7 @@ def  wy163():
     page_text = requests.get(url=url, params=params, headers=headers).text
     tree = etree.HTML(page_text)
     title = tree.xpath('/html/head/title/text()')
-    now=tree.xpath('/html/body/div[2]/div[1]/div[3]/table/tbody/tr/td[2]/div/table/tbody/tr[1]/td[1]/span/strong/text()')
+    now=tree.xpath('/html/body/div[2]/div[3]/table/tbody/tr[1]/td[2]')
 
     print(title,'111')
     print(now)
@@ -38,4 +38,4 @@ def sina():
 
 
 if __name__ == '__main__':
-    sina()
+    wy163()
